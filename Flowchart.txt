@@ -1,0 +1,41 @@
+[Weight Sensor Running in Loop]  
+              │  
+              ▼  
+   [Detect Weight Change]  
+              │  
+              ▼  
+   [Send Data to HX711]  
+              │  
+              ▼  
+   [Convert Analog to Digital]  
+              │  
+              ▼  
+   [Send Data to STM32]  
+              │  
+              ▼  
+   [STM Saves New Weight]  
+              │  
+              ▼  
+   [STM Triggers Semaphore]  
+              │  
+              ▼  
+   [RFID Scanner is Activated]  
+              │  
+              ▼  
+   [Wait for RFID Tag]  
+              │  
+              ▼  
+   [RFID Tag Scanned]  
+              │  
+              ▼  
+   [STM Counts RFID Tags]  
+              │  
+              ▼  
+   [Verify Weight and RFID Match]  
+              │  
+              ▼  
+ ┌───────────────────────────┐  
+ │  Do RFID & weight match?  │  
+ └───────────┬───────────────┘  
+      Yes ▼         No ▼  
+[Print "Transaction OK"]  [Print "Error Detected"]
